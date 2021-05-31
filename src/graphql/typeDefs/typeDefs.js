@@ -1,20 +1,28 @@
 const typeDefs = `
-    type Book { 
-        title: String, author: String 
-    }
     type Signature {
         status: Int,
         message: String,
         signature: String!,
         account: String!,
-        messageHash: String
+        balance:Int,
+        messageHash: String,
+        error: String
+    }
+    type MetaTransfer {
+        status: Int,
+        message: String,
+        signature: String,
+        to:String,
+        amount:Int,
+        nonce:Int,
         error: String
     }
     type Query { 
-        books: [Book] 
+        hello: String 
     }
     type Mutation {
-        createSignature(to:String!, amount:Int!, nonce:Int!): Signature
+        createSignature(to:String!, amount:Int!, nonce:Int!): Signature!
+        metaTransfer(signature:String, to:String, amount:Int, nonce:Int):MetaTransfer
     }
 `;
 module.exports = { typeDefs };

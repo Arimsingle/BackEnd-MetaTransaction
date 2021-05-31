@@ -9,12 +9,14 @@ module.exports = SignatureApi = ({ app }) => {
             const {
                 msgHash,
                 signature,
-                account } = await HashSignature(to, amount, nonce);
+                account,
+                balance } = await HashSignature(to, amount, nonce);
             res.send({
                 status: 200,
                 message: "create signature success",
                 signature,
                 account,
+                balance,
                 messageHash: msgHash,
             });
         } catch (error) {

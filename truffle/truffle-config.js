@@ -51,7 +51,7 @@ module.exports = {
       network_id: "*",       // Any network (default: none)
     },
     bitkub: {
-      provider: () => new HDWalletProvider(process.env.PRIVATE_KEY_BIKUB, "https://testnet.bkcscan.com"),
+      provider: () => new HDWalletProvider(process.env.PRIVATE_KEY_BIKUB, "https://rpc-testnet.bitkubchain.io"),
       network_id: process.env.NETWORK_ID_BITKUB,
     }
 
