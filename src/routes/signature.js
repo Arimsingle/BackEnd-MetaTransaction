@@ -18,6 +18,9 @@ module.exports = SignatureApi = ({ app }) => {
                 account,
                 balance,
                 messageHash: msgHash,
+                to,
+                amount,
+                nonce,
             });
         } catch (error) {
             console.log(error);

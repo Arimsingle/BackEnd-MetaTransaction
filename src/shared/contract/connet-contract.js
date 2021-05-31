@@ -2,8 +2,8 @@
 const ethers = require('ethers');
 const { MetaTransactionAbi } = require('../abi/meta-transaction');
 const { CONTRACT_ADDRESS, HOST, TRUFFLE_PORT } = require("../variables/variables");
-const provider = new ethers.providers.JsonRpcProvider(`http://${HOST}:${TRUFFLE_PORT}/`);
-// const provider = new ethers.providers.JsonRpcProvider(`https://rpc-testnet.bitkubchain.io`);
+// const provider = new ethers.providers.JsonRpcProvider(`http://${HOST}:${TRUFFLE_PORT}/`);
+const provider = new ethers.providers.JsonRpcProvider(`https://rpc-testnet.bitkubchain.io`);
 const contract = new ethers.Contract(CONTRACT_ADDRESS, MetaTransactionAbi, provider);
 module.exports = { contract }
 

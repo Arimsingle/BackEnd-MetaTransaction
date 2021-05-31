@@ -12,6 +12,9 @@ app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 //call api/signature
 require("./routes/signature")({ app });
 require("./routes/meta-transfer")({ app });
+require("./routes/balance")({ app });
+require("./routes/hash-message")({ app });
+require("./routes/recover-signer")({ app });
 //say hello
 app.get('/api', Index);
 //Rest API server
