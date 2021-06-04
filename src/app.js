@@ -1,10 +1,11 @@
 require('dotenv').config({ path: '../.env' });
 const express = require('express');
+const cors = require('cors')
 const { graphqlExpress, graphiqlExpress } = require('apollo-server-express');
 const app = express();
 const Index = require("./routes/index");
 const { schema } = require("./graphql/schema/schema");
-
+app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use('/graphql', express.json(), graphqlExpress({ schema }));
