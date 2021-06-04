@@ -1,5 +1,4 @@
 # BackEnd-MetaTransaction
-**ตอนนี้ยังไม่เสร็จสมบูรณ์นะครับ**\
 Backend MetaTransaction simulator\
 การทำ Transaction บน Blockchain โดยที่ user/client ไม่ต้องเสียค่าแก้ส\
 โดยผมทำเป็น Open api ให้Devคนอื่นสามารถเรียกใช้งานได้ด้วย มีแบบ Rest api, GraphQL
